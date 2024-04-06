@@ -4,3 +4,85 @@
 body {
     background-color: whitesmoke;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    background-color: $danger;
+    color: $warning;
+    border-radius: 2vh;
+}
+
+section {
+    display: flex;
+    gap: 1em;
+    flex-wrap: nowrap;
+}
+
+article {
+    border-radius: 2vh;
+    margin: 1em;
+    padding: 1em;
+    background-color: $danger;
+    color: $warning;
+    width: auto;
+}
+
+fieldset {
+    background-color: $danger;
+    color: $warning;
+    border-radius: 2vh;
+    margin: auto;
+    /* permet de centrer le fieldset mais empêche les bordures qu'on retrouve chez les éléments de section*/
+    padding: 1em;
+}
+
+fieldset input, textarea {
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2,
+legend {
+    color: $primary;
+}
+
+h3 {
+    color: $success;
+}
+
+
+@media (max-width: 800px) {
+    header {
+        text-align: center;
+    }
+
+    section {
+        flex-wrap: wrap;
+    }
+
+    .col-3 {
+        width: 100%;
+        /* pour forcer l'affichage sur la totalité de la largeur de la page */
+        flex-grow: initial;
+        /* pour annuler cette propriété */
+        flex-shrink: initial;
+        /* pour annuler cette propriété */
+        flex-basis: auto;
+        /* pour annuler cette propriété */
+    }
+
+    .col-6 {
+        width: 100%;
+        flex-grow: initial;
+        flex-shrink: initial;
+        flex-basis: auto;
+    }
+
+}
