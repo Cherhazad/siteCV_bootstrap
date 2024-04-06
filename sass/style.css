@@ -11898,6 +11898,7 @@ legend {
 
 h3, .h3 {
   color: pink;
+  margin-top: 1em;
 }
 
 @media (max-width: 800px) {
