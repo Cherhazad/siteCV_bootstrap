@@ -33,6 +33,8 @@ article {
 }
 
 fieldset {
+    display: flex;
+    justify-content: center;
     background-color: $danger;
     color: $warning;
     border-radius: 2vh;
@@ -41,7 +43,8 @@ fieldset {
     padding: 1em;
 }
 
-fieldset input, textarea {
+fieldset input,
+textarea {
     border-radius: 5%;
     display: flex;
     flex-direction: column;
@@ -53,13 +56,27 @@ legend {
     color: $primary;
 }
 
+legend {
+    padding-top: 1em;
+    text-align: center;
+}
+
 h3 {
     color: $success;
     margin-top: 1em;
 }
 
+footer {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
 
 @media (max-width: 800px) {
+    body {
+        font-size: small;
+    }
+
     header {
         text-align: center;
     }
@@ -84,6 +101,10 @@ h3 {
         flex-grow: initial;
         flex-shrink: initial;
         flex-basis: auto;
+    }
+
+    fieldset {
+        flex-wrap: wrap;
     }
 
 }
